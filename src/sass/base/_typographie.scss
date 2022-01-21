@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Roboto-medium';
+    src: url('./polices/Roboto-Medium.woff2') format('woff2'),
+        url('./polices/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url('./polices/Roboto-Regular.woff2') format('woff2'),
+        url('./polices/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: 'Roboto-medium';
+    color: black;
+}
+
+p {
+    font-family: 'Roboto-regular';
+}

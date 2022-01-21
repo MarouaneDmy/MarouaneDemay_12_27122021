@@ -1,0 +1,301 @@
+@charset "UTF-8";
+html {
+  margin-left: 12%;
+  margin-right: 6%;
+  margin-top: 7%;
+}
+
+@font-face {
+  font-family: "Roboto-medium";
+  src: url("./polices/Roboto-Medium.woff2") format("woff2"), url("./polices/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto-regular";
+  src: url("./polices/Roboto-Regular.woff2") format("woff2"), url("./polices/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+h1 {
+  font-family: "Roboto-medium";
+  color: black;
+}
+
+p {
+  font-family: "Roboto-regular";
+}
+
+header {
+  display: flex;
+  height: 91px;
+  background-color: black;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.sideBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-color: black;
+  height: 100%;
+  width: 117px;
+  left: 0px;
+  top: 0px;
+}
+.sideBar ul {
+  margin: 0px;
+  padding: 0px;
+}
+.sideBar li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 64px;
+  width: 64px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+.sideBar p {
+  position: absolute;
+  color: white;
+  font-size: 12px;
+  width: 200px;
+  rotate: 270deg;
+  bottom: 120px;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  height: 60px;
+}
+
+.navigation {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+.navigation ul {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  margin-right: 10%;
+}
+.navigation li {
+  font-family: "Roboto-regular";
+  font-size: 24px;
+}
+.navigation li a {
+  text-decoration: none;
+  color: white;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.titleProfile {
+  width: 100%;
+  font-size: 48px;
+  margin-top: 0px;
+}
+.titleProfile span {
+  color: red;
+}
+
+.subtitle {
+  width: 100%;
+  font-family: "Roboto-regular";
+  font-size: 18px;
+  margin-bottom: 60px;
+}
+
+.keyData {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 258px;
+  height: 124px;
+  background-color: #FBFBFB;
+  margin-bottom: 20px;
+}
+.keyData section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  margin-left: 30px;
+}
+.keyData .unit {
+  display: flex;
+  margin-top: -20px;
+  margin-left: 20px;
+}
+.keyData p {
+  font-family: "Roboto-medium";
+  margin: 0;
+}
+.keyData .subtitleCategorie {
+  position: absolute;
+  top: 70px;
+  left: 110px;
+  color: #74798C;
+  font-size: 14px;
+}
+.keyData .iconCalories {
+  background-color: #FF00001A;
+}
+.keyData .iconProteines {
+  background-color: #4AB8FF1A;
+}
+.keyData .iconGlucides {
+  background-color: #F9CE231A;
+}
+.keyData .iconLipides {
+  background-color: #FD51811A;
+}
+
+.allChart {
+  width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.barChartSection {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 835px;
+  height: 350px;
+  background-color: #FBFBFB;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+.barChartSection p {
+  font-family: "Roboto-medium";
+  margin-left: 40px;
+  margin-top: -5px;
+}
+.barChartSection ul {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: 40px;
+}
+.barChartSection ul li {
+  margin-left: 20px;
+  font-family: "Roboto-medium";
+  font-size: 14px;
+  color: #74798C;
+  list-style: none;
+}
+.barChartSection ul .poids::before {
+  content: "•";
+  color: black;
+  font-size: 30px;
+  display: absolute;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -10px;
+  top: 6px;
+}
+.barChartSection ul .calories::before {
+  content: "•";
+  color: red;
+  font-size: 30px;
+  display: absolute;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -10px;
+  top: 6px;
+}
+.barChartSection .barChartContainer {
+  margin-left: 20px;
+}
+
+.titleLineChart {
+  position: absolute;
+  z-index: 1;
+}
+
+.lineChartSection {
+  display: flex;
+  align-items: center;
+  background-color: red;
+  width: 300px;
+  height: 300px;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+.lineChartSection p {
+  font-size: 15px;
+  font-family: "Roboto-medium";
+  color: #FFFFFF;
+  opacity: 0.5;
+  width: 147px;
+  margin-top: -200px;
+  margin-left: 30px;
+}
+
+.radarChartSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: #282D30;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+.userScore {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FBFBFB;
+  border-radius: 6px;
+}
+.userScore p {
+  position: absolute;
+  width: 70px;
+  color: grey;
+}
+.userScore .titleScore {
+  position: absolute;
+  font-family: "Roboto-medium";
+  color: black;
+  left: 30px;
+  top: 20px;
+}
+.userScore span {
+  font-size: 30px;
+  color: black;
+  font-weight: 1000;
+}
+
+/*# sourceMappingURL=index.css.map */

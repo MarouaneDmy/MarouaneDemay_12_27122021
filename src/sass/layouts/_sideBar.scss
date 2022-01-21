@@ -1,0 +1,35 @@
+.sideBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background-color: black;
+    height: 100%;
+    width: 117px;
+    left: 0px;
+    top: 0px;
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        height: 64px;
+        width: 64px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+    }
+    p {
+        position: absolute;
+        color: white;
+        font-size: 12px;
+        width: 200px;
+        rotate: 270deg;
+        bottom: 120px;
+        
+    }
+}
