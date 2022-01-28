@@ -29,14 +29,14 @@ export default function Profile(props) {
   return (
     <div className='dashboard'>
       <h1 className='titleProfile'>Bonjour <span>{firstName}</span> </h1>
-      <p className='subtitle'>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+      <p className='subtitle'>Félicitation ! Vous avez explosé vos objectifs hier <span></span>👏</p>
       <div className='allChart'>
         <BarChart/>
         <LineChart/>
         <RadarChart/>
         <PieChart/>
       </div>
-      <div>
+      <div className='allKeyData'>
         <KeyData categorie="Calories" icone={Calories} nombre={typeKeyData.calorieCount} type="kCal"></KeyData>
         <KeyData categorie="Proteines" icone={Proteines} nombre={typeKeyData.proteinCount} type="g"></KeyData>
         <KeyData categorie="Glucides" icone={Glucides} nombre={typeKeyData.carbohydrateCount} type="g"></KeyData>

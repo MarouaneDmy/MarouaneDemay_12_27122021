@@ -9,6 +9,7 @@ export default function TinyLineChart(props) {
 
     const [dataSessions, setDataSessions] = useState([]);
   
+    // Récupération de la donnée des sessions de l'utilisateur via le transformateur
     useEffect(() => {
     async function fetchData() {
         const data = await transformateur("lineChart")
@@ -18,6 +19,7 @@ export default function TinyLineChart(props) {
     fetchData();
     }, []);
 
+    // Données à afficher le tooltip actif
     const InfoToolTip = ({ payload, active }) => {
         if (active) {
             return (
@@ -29,15 +31,15 @@ export default function TinyLineChart(props) {
         return null
     }
 
+    // Jours affichés sur XAxis
     const days = ["L", "M", "M", "J", "V", "S", "D"]
-    console.log(dataSessions)
 
     return (
         <div className="lineChartSection">
             <p className="titleLineChart">Durée moyenne des sessions</p>
             <ResponsiveContainer className="lineChart" height={250}> 
                 <LineChart data={dataSessions} margin={{ top: 5, right: 0, left: 0, bottom: 5 }} >
-                    <XAxis padding={{left:10, right:10}} tickFormatter={(d)=>days[d]} tickMargin={10} tickLine={false} stroke="white"/>
+                    <XAxis padding={{left:15, right:15}} tickFormatter={(d)=>days[d]} tickMargin={10} tickLine={false} stroke="white"/>
                     <Tooltip
                         content={<InfoToolTip/>}
                         isAnimationActive={false}

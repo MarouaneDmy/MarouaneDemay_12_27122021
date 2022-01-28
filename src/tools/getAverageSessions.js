@@ -1,6 +1,12 @@
 /* import data from '../data/data' */
 import axios from "axios";
 
+/**
+ * Retrieve user average sessions by id
+ * @constructor
+ * @returns {object}
+*/
+
 export default async function getUserAverageSessionsById(){
     let url = document.location.href;
     let id_url = url.substring (url.lastIndexOf( "/" ) + 1);

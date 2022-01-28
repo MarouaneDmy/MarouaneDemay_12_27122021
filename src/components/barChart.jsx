@@ -10,6 +10,7 @@ export default function SimpleBarChart(props) {
 
     const [dataActivity, setDataActivity] = useState([]);
   
+    // Récupération de la donnée d'activité de l'utilisateur via le transformateur
     useEffect(() => {
     async function fetchData() {
         const data = await transformateur("barChart")
@@ -19,6 +20,7 @@ export default function SimpleBarChart(props) {
     fetchData();
     }, []);
 
+    // Données à afficher le tooltip actif
     const InfoToolTip = ({ payload, active }) => {
         if (active) {
           return (

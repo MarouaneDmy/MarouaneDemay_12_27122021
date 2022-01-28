@@ -11,10 +11,11 @@ import transformateur from '../tools/modelisation';
 
 export default function TinyLineChart(props) {
 
-    /* let data = transformateur("radarChart") */
+    /* let dataPerformance = transformateur("radarChart") */
 
     const [dataPerformance, setDataPerformance] = useState([]);
   
+    // Récupération de la donnée de performance de l'utilisateur via le transformateur
     useEffect(() => {
     async function fetchData() {
         const data = await transformateur("radarChart")

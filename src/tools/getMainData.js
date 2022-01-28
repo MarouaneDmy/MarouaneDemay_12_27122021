@@ -1,6 +1,12 @@
 /* import data from '../data/data' */
 import axios from 'axios'
 
+/**
+ * Retrieve user main data by id
+ * @constructor
+ * @returns {object}
+*/
+
 export default async function getUserMainDataById(){
     let url = document.location.href;
     let id_url = url.substring (url.lastIndexOf( "/" ) + 1);

@@ -10,6 +10,7 @@ export default function LevelPieChart(props) {
 
     const [todayScore, setTodayScore] = useState([]);
   
+    // Récupération de la donnée du score du jour de l'utilisateur via le transformateur
     useEffect(() => {
     async function fetchData() {
         const data = await transformateur("pieChart")
@@ -19,11 +20,14 @@ export default function LevelPieChart(props) {
     fetchData();
     }, []);
 
+    // Pourcentages du score actuel et restant de l'utilisateur
     const percent = todayScore * 100;
     const remainingPercent = 100 - percent;
+
+    // Valeur des pourcentages données au diagramme de score
     const score = [
-    { name: "percent", value: percent, fillColor: "#e60000" },
-    { name: "remaining", value: remainingPercent, fillColor: "white" },
+        { name: "percent", value: percent, fillColor: "#e60000" },
+        { name: "remaining", value: remainingPercent, fillColor: "white" },
     ]
 
     return (
