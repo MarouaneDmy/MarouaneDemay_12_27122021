@@ -235,6 +235,19 @@ header {
   margin-left: 20px;
 }
 
+.custom-tooltip_barChart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 63px;
+  width: 39px;
+  background-color: red;
+  color: white;
+  font-family: "Roboto-medium";
+  font-size: 9px;
+}
+
 .titleLineChart {
   position: absolute;
   z-index: 1;
@@ -257,6 +270,17 @@ header {
   width: 147px;
   margin-top: -200px;
   margin-left: 30px;
+}
+
+.custom-tooltip_lineChart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 39px;
+  height: 25px;
+  background-color: white;
+  color: black;
+  font-size: 11px;
 }
 
 .radarChartSection {

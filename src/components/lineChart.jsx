@@ -22,7 +22,7 @@ export default function TinyLineChart(props) {
         if (active) {
             return (
                 <div className="custom-tooltip_lineChart">
-                    <p>{payload[0].value}min</p>
+                    <span>{payload[0].value} min</span>
                 </div>
             )
         }
@@ -30,13 +30,14 @@ export default function TinyLineChart(props) {
     }
 
     const days = ["L", "M", "M", "J", "V", "S", "D"]
+    console.log(dataSessions)
 
     return (
         <div className="lineChartSection">
             <p className="titleLineChart">Durée moyenne des sessions</p>
             <ResponsiveContainer className="lineChart" height={250}> 
                 <LineChart data={dataSessions} margin={{ top: 5, right: 0, left: 0, bottom: 5 }} >
-                    <XAxis tickFormatter={(d)=>days[d]} tickMargin={10} tickLine={false} stroke="white"/>
+                    <XAxis padding={{left:10, right:10}} tickFormatter={(d)=>days[d]} tickMargin={10} tickLine={false} stroke="white"/>
                     <Tooltip
                         content={<InfoToolTip/>}
                         isAnimationActive={false}

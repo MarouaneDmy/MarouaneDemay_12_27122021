@@ -5,20 +5,20 @@ import transformateur from '../tools/modelisation';
 
 export default function LevelPieChart(props) {
 
-    /* let data = transformateur("pieChart") */
+    /* let data = transformateur("pieChart")
+    const todayScore = data.todayScore */
 
-    const [dataScore, setDataScore] = useState([]);
+    const [todayScore, setTodayScore] = useState([]);
   
     useEffect(() => {
     async function fetchData() {
         const data = await transformateur("pieChart")
-        setDataScore(data.todayScore)
+        setTodayScore(data.todayScore)
         return data
     }
     fetchData();
     }, []);
 
-    const todayScore = dataScore;
     const percent = todayScore * 100;
     const remainingPercent = 100 - percent;
     const score = [

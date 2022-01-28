@@ -31,8 +31,8 @@ export default function SimpleBarChart(props) {
         return null
     }
 
-    const jourX = (tickItem) => {
-        return tickItem + 1;
+    const jourX = (iNbDay) => {
+        return iNbDay + 1;
     };
 
     return (

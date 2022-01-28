@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export default function KeyData(props) {   
 
@@ -15,3 +16,10 @@ export default function KeyData(props) {
         </div>
     )
 }
+
+KeyData.propTypes = {  
+    categorie: PropTypes.string,
+    icone: PropTypes.string,
+    nombre: PropTypes.number,
+    type: PropTypes.string
+};
